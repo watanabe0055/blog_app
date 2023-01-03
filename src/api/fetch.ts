@@ -1,13 +1,12 @@
-import Client from './client'
-
 import axios from 'axios'
 import { createClient } from 'microcms-js-sdk'
+import Client from '../../libs/client'
 
 const fetchCmsDate = async () => {
-  const data: any = await Client.get({
+  const data = await Client.get({
     endpoint: 'blogs',
   })
-  console.log(data.contents[0].content)
+  return data.contents[0]
 }
 
 export default fetchCmsDate
