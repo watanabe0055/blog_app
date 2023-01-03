@@ -7,8 +7,6 @@ import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
   const { id, title, content, updatedAt } = props
-  console.log(props)
-  console.log(Icon('SHOW'))
   return (
     <>
       <div className={styled.sec}>
@@ -18,7 +16,7 @@ const BlogDetail = (props: Blog) => {
             <p className={styled.title01}>{title}</p>
             <p>{content}</p>
             <p>{updatedAt}</p>
-            <Link href={`${id}`}>
+            <Link href={`blog/${id}`}>
               <button className={styled.button}>
                 詳細へ
                 <img src={Icon('SHOW')} alt='Image' />
