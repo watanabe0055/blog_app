@@ -1,7 +1,7 @@
 import { Inter } from '@next/font/google'
 import client from '../../libs/client'
-import type { Blog, Category } from '../type/blog'
 import BlogDetail from '../template/card/blogDetail'
+import type { Blog, Category } from '../type/blog'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,12 +26,17 @@ type Props = {
 
 export default function Home({ blog }) {
   const detail: Props = blog
-
+  console.log(blog)
   return (
     <>
-      {detail.map((blog, index) => (
+      {detail.map((blog: Blog, index: number) => (
         <div key={index}>
-          <BlogDetail title={blog.title} content={blog.content} updatedAt={blog.updatedAt} />
+          <BlogDetail
+            id={blog.id}
+            title={blog.title}
+            content={blog.content}
+            updatedAt={blog.updatedAt}
+          />
         </div>
       ))}
     </>

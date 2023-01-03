@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import styled from './blogDetail.module.scss'
 import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
-  const { title, content, updatedAt } = props
+  const { id, title, content, updatedAt } = props
   console.log(props)
   return (
     <>
@@ -14,6 +15,9 @@ const BlogDetail = (props: Blog) => {
             <p className={styled.title01}>{title}</p>
             <p>{content}</p>
             <p>{updatedAt}</p>
+            <Link href={`${id}`}>
+              <button className={styled.button}>詳細へ</button>
+            </Link>
           </li>
         </ul>
       </div>
