@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from './blogDetail.module.scss'
+// eslint-disable-next-line import/no-unresolved
+import Icon from '@/atom/icon/icon'
 import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
   const { id, title, content, updatedAt } = props
   console.log(props)
+  console.log(Icon('SHOW'))
   return (
     <>
       <div className={styled.sec}>
@@ -16,7 +19,10 @@ const BlogDetail = (props: Blog) => {
             <p>{content}</p>
             <p>{updatedAt}</p>
             <Link href={`${id}`}>
-              <button className={styled.button}>詳細へ</button>
+              <button className={styled.button}>
+                詳細へ
+                <img src={Icon('SHOW')} alt='Image' />
+              </button>
             </Link>
           </li>
         </ul>
