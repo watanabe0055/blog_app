@@ -13,7 +13,7 @@ export const getStaticPaths = async () => {
 }
 
 // microCMSへAPIリクエスト
-export const getStaticProps = async (context) => {
+export const getStaticProps = async (context: { params: { id: any } }) => {
   const id = context.params.id
   const data = await client.get({
     endpoint: 'blogs',
