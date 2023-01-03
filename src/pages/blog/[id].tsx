@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import client from '../../../libs/client'
 // eslint-disable-next-line import/no-unresolved
@@ -28,7 +29,14 @@ export const getStaticProps = async (context: { params: { id: any } }) => {
   }
 }
 
-export default function BlogId({ blog }) {
+// Propsの型
+type Props = {
+  blog: Blog[]
+  tags: Category[]
+}
+
+export default function BlogId({ blog }: Props) {
+  console.log(blog)
   return (
     <>
       <h1>{blog.title}</h1>
