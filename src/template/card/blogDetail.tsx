@@ -1,3 +1,4 @@
+import moment from 'moment'
 import Link from 'next/link'
 import { useState } from 'react'
 import styled from './blogDetail.module.scss'
@@ -14,8 +15,12 @@ const BlogDetail = (props: Blog) => {
           <li>
             <span className={`${styled.fa} ${styled.fa_code}`}></span>
             <p className={styled.title01}>{title}</p>
-            <p>{content}</p>
-            <p>{updatedAt}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `${content}`,
+              }}
+            />
+            <p>最終更新日: {moment(updatedAt).format('YYYY-MM-DD')}</p>
             <Link href={`blog/${id}`}>
               <button className={styled.button}>
                 詳細へ

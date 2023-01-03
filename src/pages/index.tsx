@@ -1,9 +1,7 @@
-import { Inter } from '@next/font/google'
+import moment from 'moment'
 import client from '../../libs/client'
 import BlogDetail from '../template/card/blogDetail'
 import type { Blog, Category } from '../type/blog'
-
-const inter = Inter({ subsets: ['latin'] })
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
@@ -24,18 +22,22 @@ type Props = {
   tags: Category[]
 }
 
-export default function Home({ blog }) {
-  const detail: Props = blog
+export default function Home({ blog }: Props) {
   console.log(blog)
   return (
     <>
-      {detail.map((blog: Blog, index: number) => (
+      {blog.map((blog: Blog, index: number) => (
         <div key={index}>
           <BlogDetail
             id={blog.id}
             title={blog.title}
             content={blog.content}
             updatedAt={blog.updatedAt}
+            category={[]}
+            createdAt={''}
+            eyecatch={undefined}
+            publishedAt={''}
+            revisedAt={''}
           />
         </div>
       ))}

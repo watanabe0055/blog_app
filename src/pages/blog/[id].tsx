@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import moment from 'moment'
 import Link from 'next/link'
 import client from '../../../libs/client'
 // eslint-disable-next-line import/no-unresolved
@@ -45,6 +46,7 @@ export default function BlogId({ blog }: Props) {
           __html: `${blog.content}`,
         }}
       />
+      <p> 最終更新日: {moment(blog.updatedAt).format('YYYY-MM-DD')}</p>
       <Link href={`/`}>
         <button>
           詳細へ
