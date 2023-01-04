@@ -1,7 +1,7 @@
 import client from '../../../libs/client'
-import AppConteiner from '@/atom/conteiner/conteiner'
 import BlogShow from '@/template/id/index'
 import type { Blog, Category } from '@/type/blog'
+import AppConteiner from '@/atom/conteiner/conteiner'
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
@@ -37,9 +37,7 @@ export default function BlogId({ blog }: any) {
   console.log(blog)
   return (
     <>
-      <AppConteiner>
-        <BlogShow title={blog.title} content={blog.content} updatedAt={blog.updatedAt} />
-      </AppConteiner>
+      <BlogShow title={blog.title} content={blog.content} updatedAt={blog.updatedAt} />
     </>
   )
 }
