@@ -1,9 +1,8 @@
 import moment from 'moment'
 import Link from 'next/link'
 import styled from './blogDetail.module.scss'
-// eslint-disable-next-line import/no-unresolved
+import Button from '@/atom/button/buttons'
 import Icon from '@/atom/icon/icon'
-// eslint-disable-next-line import/no-unresolved
 import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
@@ -22,10 +21,7 @@ const BlogDetail = (props: Blog) => {
             />
             <p>最終更新日: {moment(updatedAt).format('YYYY-MM-DD')}</p>
             <Link href={`blog/${id}`}>
-              <button className={styled.button}>
-                詳細へ
-                <img src={Icon('SHOW')} alt='Image' />
-              </button>
+              <Button text={'詳細へ'} />
             </Link>
           </li>
         </ul>
