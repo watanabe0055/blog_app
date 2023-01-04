@@ -3,6 +3,8 @@ import Link from 'next/link'
 // eslint-disable-next-line import/no-unresolved
 import styled from './index.module.scss'
 //import AppConteiner from '@/atom/conteiner/conteiner'
+// eslint-disable-next-line import/no-unresolved
+import Button from '@/atom/button/buttons'
 
 const BlogShow = (props: { title: string; content: string; updatedAt: string }) => {
   const { title, content, updatedAt } = props
@@ -17,7 +19,7 @@ const BlogShow = (props: { title: string; content: string; updatedAt: string }) 
         />
         <p> 最終更新日: {moment(updatedAt).format('YYYY-MM-DD')}</p>
         <Link href={`/`}>
-          <button>一覧へ</button>
+          <Button text={'一覧へ'} />
         </Link>
       </div>
     </>
