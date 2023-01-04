@@ -5,6 +5,9 @@ const Icon = (props: string) => {
     case 'SHOW':
       return 'arrow_right_solid'
       break
+    case 'INDEX':
+      return '値Bの処理'
+      break
     case 'DELETE':
       return '値Bの処理'
       break
