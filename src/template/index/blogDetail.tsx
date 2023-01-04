@@ -1,9 +1,9 @@
 import moment from 'moment'
 import Link from 'next/link'
-import { useState } from 'react'
 import styled from './blogDetail.module.scss'
 // eslint-disable-next-line import/no-unresolved
 import Icon from '@/atom/icon/icon'
+// eslint-disable-next-line import/no-unresolved
 import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {

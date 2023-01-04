@@ -4,6 +4,8 @@ import Link from 'next/link'
 import client from '../../../libs/client'
 // eslint-disable-next-line import/no-unresolved
 import Icon from '@/atom/icon/icon'
+// eslint-disable-next-line import/no-unresolved
+import BlogShow from '@/template/id/index'
 import type { Blog, Category } from '@/type/blog'
 
 // 静的生成のためのパスを指定します
@@ -33,26 +35,14 @@ export const getStaticProps = async (context: { params: { id: any } }) => {
 // Propsの型
 type Props = {
   blog: Blog[]
-  tags: Category[]
+  category: Category[]
 }
 
-export default function BlogId({ blog }: Props) {
+export default function BlogId({ blog }: any) {
   console.log(blog)
   return (
     <>
-      <h1>{blog.title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
-        }}
-      />
-      <p> 最終更新日: {moment(blog.updatedAt).format('YYYY-MM-DD')}</p>
-      <Link href={`/`}>
-        <button>
-          詳細へ
-          <img src={Icon('INDEX')} alt='Image' />
-        </button>
-      </Link>
+      <BlogShow title={blog.title} content={blog.content} updatedAt={blog.updatedAt} />
     </>
   )
 }

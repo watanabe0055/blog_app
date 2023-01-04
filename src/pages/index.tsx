@@ -1,6 +1,6 @@
 import moment from 'moment'
 import client from '../../libs/client'
-import BlogDetail from '../template/card/blogDetail'
+import BlogDetail from '../template/index/blogDetail'
 import type { Blog, Category } from '../type/blog'
 
 // microCMSへAPIリクエスト
@@ -22,7 +22,7 @@ type Props = {
   tags: Category[]
 }
 
-export default function Home({ blog }: Props) {
+export default function Home({ blog }: any) {
   console.log(blog)
   return (
     <>
