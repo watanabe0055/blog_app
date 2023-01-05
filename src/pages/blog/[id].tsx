@@ -1,7 +1,6 @@
 import client from '../../../libs/client'
 import BlogShow from '@/template/id/index'
 import type { Blog, Category } from '@/type/blog'
-import AppConteiner from '@/atom/conteiner/conteiner'
 
 // 静的生成のためのパスを指定します
 export const getStaticPaths = async () => {
