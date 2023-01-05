@@ -2,7 +2,6 @@ import moment from 'moment'
 import Link from 'next/link'
 // eslint-disable-next-line import/no-unresolved
 import styled from './index.module.scss'
-//import AppConteiner from '@/atom/conteiner/conteiner'
 // eslint-disable-next-line import/no-unresolved
 import Button from '@/atom/button/buttons'
 
