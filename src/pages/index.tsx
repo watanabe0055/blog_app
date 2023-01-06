@@ -1,7 +1,9 @@
-import moment from 'moment'
+import React from 'react'
 import client from '../../libs/client'
 import BlogDetail from '../template/index/blogDetail'
 import type { Blog, Category } from '../type/blog'
+// eslint-disable-next-line import/no-unresolved
+import HundleSetTitle from '@/atom/title/index'
 
 // microCMSへAPIリクエスト
 export const getStaticProps = async () => {
@@ -23,9 +25,12 @@ type Props = {
 }
 
 export default function Home({ blog }: any) {
-  console.log(blog)
   return (
     <>
+      <HundleSetTitle
+        title={'一覧画面 | BLOG'}
+        content={'ポートフォリオ用に作成したブログサイトです。CMSはmicroCMSを使用しています。'}
+      />
       {blog.map((blog: Blog, index: number) => (
         <div key={index}>
           <BlogDetail
