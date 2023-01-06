@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { createClient } from 'microcms-js-sdk'
 import Client from '../../libs/client'
 
