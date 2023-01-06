@@ -18,3 +18,9 @@ export type Category = {
   revisedAt: string
   updatedAt: string
 }
+
+export type Eyecatch = {
+  url: string
+  width: number
+  height: number
+}

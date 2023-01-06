@@ -2,7 +2,7 @@ import moment from 'moment'
 import Link from 'next/link'
 import styled from './blogDetail.module.scss'
 import Button from '@/atom/button/buttons'
-import type { Blog, Category } from '@/type/blog'
+import type { Blog, Category, Eyecatch } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
   const { id, title, content, updatedAt } = props
