@@ -1,4 +1,3 @@
-import moment from 'moment'
 import client from '../../libs/client'
 import BlogDetail from '../template/index/blogDetail'
 import type { Blog, Category } from '../type/blog'
