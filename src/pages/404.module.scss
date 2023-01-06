@@ -1,7 +1,27 @@
+$pc: 'only screen and (min-width: 1200px)';
+$tablet: 'only screen and (min-width:479px) and (max-width:768px)';
+$smartphone: 'only screen and (max-width:479px)';
+$pcMaxSize: 900px;
+$tabletMaxSize: 500px;
+$spMaxSize: 300px;
+
 .error_contents {
   margin: 0 auto;
   text-align: center;
   .error_contents_text {
     font-size: 20px;
+  }
+  .error_contents_image {
+    height: auto;
+    border-radius: 12px;
+    @media screen and (max-width: 479px) {
+      width: $spMaxSize;
+    }
+    @media screen and (min-width: 479px) and (max-width: 768px) {
+      width: $tabletMaxSize;
+    }
+    @media screen and (min-width: 1200px) {
+      width: $pcMaxSize;
+    }
   }
 }
