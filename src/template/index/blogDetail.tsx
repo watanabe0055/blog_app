@@ -2,7 +2,6 @@ import moment from 'moment'
 import Link from 'next/link'
 import styled from './blogDetail.module.scss'
 import Button from '@/atom/button/buttons'
-import Icon from '@/atom/icon/icon'
 import type { Blog, Category } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
