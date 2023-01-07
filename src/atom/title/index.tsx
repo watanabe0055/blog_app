@@ -2,7 +2,6 @@ import Head from 'next/head'
 import React from 'react'
 
 const HundleSetTitle = (props: { title: string; content: string }) => {
-  console.log(props)
   return (
     <>
       <Head>

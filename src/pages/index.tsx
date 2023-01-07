@@ -1,7 +1,7 @@
 import React from 'react'
 import client from '../../libs/client'
 import BlogDetail from '../template/index/blogDetail'
-import type { Blog, Category } from '../type/blog'
+import type { Blog, Category, Eyecatch } from '../type/blog'
 // eslint-disable-next-line import/no-unresolved
 import HundleSetTitle from '@/atom/title/index'
 
@@ -18,12 +18,6 @@ export const getStaticProps = async () => {
   }
 }
 
-// Propsの型
-type Props = {
-  blogs: Blog[]
-  tags: Category[]
-}
-
 export default function Home({ blog }: any) {
   return (
     <>
@@ -38,9 +32,9 @@ export default function Home({ blog }: any) {
             title={blog.title}
             content={blog.content}
             updatedAt={blog.updatedAt}
-            category={[]}
+            category={blog.category}
+            eyecatch={blog.eyecatch}
             createdAt={''}
-            eyecatch={undefined}
             publishedAt={''}
             revisedAt={''}
           />

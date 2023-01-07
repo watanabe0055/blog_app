@@ -4,7 +4,7 @@ export type Blog = {
   category: Category[]
   content: string
   createdAt: string
-  eyecatch: any
+  eyecatch: Eyecatch[]
   publishedAt: string
   revisedAt: string
   updatedAt: string
@@ -17,4 +17,10 @@ export type Category = {
   publishedAt: string
   revisedAt: string
   updatedAt: string
+}
+
+export type Eyecatch = {
+  url: string
+  width: number
+  height: number
 }
