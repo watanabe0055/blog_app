@@ -19,7 +19,6 @@ export const getStaticProps = async () => {
 }
 
 export default function Home({ blog }: any) {
-  console.log(blog)
   return (
     <>
       <HundleSetTitle
