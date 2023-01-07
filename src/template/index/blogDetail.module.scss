@@ -35,7 +35,7 @@
     color: #63b7e6;
   }
   ul li:hover .title01:after {
-    width: 25px;
+    width: 200px;
   }
   ul li span {
     font-size: 2.6em;
@@ -74,14 +74,22 @@
     line-height: 26px;
     transition: color 0.3s;
   }
-}
+  .category_text {
+    margin: 10px 0;
+    color: #fff;
+    padding-right: 10px;
+    width: fit-content;
+    background-color: #86c8bc;
+    border: solid 1px #fff6bd;
+    border-radius: 12px;
+  }
+  .button {
+    width: 147px;
+    height: 48px;
+  }
 
-.button {
-  width: 147px;
-  height: 48px;
-}
-
-.eyecatch_image {
-  border: solid 1px #555;
-  border-radius: 12px;
+  .eyecatch_image {
+    border: solid 1px #555;
+    border-radius: 12px;
+  }
 }
