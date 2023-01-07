@@ -30,7 +30,8 @@ const BlogDetail = (props: Blog) => {
               width={300}
               height={250}
             />
-            <p className={styled.title01}>{title}</p>
+            <p className={styled.title}>{title}</p>
+            <p className={styled.category_text}>{category?.name}</p>
             <p>最終更新日: {moment(updatedAt).format('YYYY-MM-DD')}</p>
             <Link href={`blog/${id}`}>
               <Button text={'詳細へ'} />

@@ -1,10 +1,12 @@
 .sec {
-  padding: 0;
-  background: #fff;
+  padding: 10px;
   text-align: center;
   word-wrap: break-word;
+  .title {
+    margin-top: 24px;
+  }
   ul {
-    margin: 0;
+    margin: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -12,6 +14,8 @@
     border: none;
   }
   ul li {
+    border-radius: 24px;
+    background: #fff;
     padding: 40px;
     width: 1000px;
     transition: box-shadow 0.3s;
@@ -25,17 +29,17 @@
   ul li:hover p {
     color: #555;
   }
-  ul li:hover .title01 {
+  ul li:hover .title {
     color: #63b7e6;
   }
-  ul li:hover .title01:after {
+  ul li:hover .title:after {
     width: 25px;
   }
-  ul li:hover .title01 {
+  ul li:hover .title {
     color: #63b7e6;
   }
-  ul li:hover .title01:after {
-    width: 25px;
+  ul li:hover .title:after {
+    width: 200px;
   }
   ul li span {
     font-size: 2.6em;
@@ -47,14 +51,14 @@
   ul li span:after {
     position: static;
   }
-  ul li .title01 {
+  ul li .title {
     color: #6f6f6f;
     display: inline-block;
     font-size: 24px;
     font-weight: 100;
     transition: color 0.3s;
   }
-  ul li .title01:after {
+  ul li .title:after {
     content: '';
     position: relative;
     left: 50%;
@@ -74,14 +78,22 @@
     line-height: 26px;
     transition: color 0.3s;
   }
-}
+  .category_text {
+    margin: 10px 0;
+    color: #fff;
+    padding-right: 10px;
+    width: fit-content;
+    background-color: #86c8bc;
+    border: solid 1px #fff6bd;
+    border-radius: 12px;
+  }
+  .button {
+    width: 147px;
+    height: 48px;
+  }
 
-.button {
-  width: 147px;
-  height: 48px;
-}
-
-.eyecatch_image {
-  border: solid 1px #555;
-  border-radius: 12px;
+  .eyecatch_image {
+    border: solid 1px #555;
+    border-radius: 12px;
+  }
 }
