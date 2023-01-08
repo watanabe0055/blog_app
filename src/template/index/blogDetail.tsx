@@ -12,6 +12,7 @@ const BlogDetail = (props: Blog) => {
   //nextのimageコンポーネントのオプション
   //これがないとエラーになります！
   const imgLoader = ({ src, width, quality }) => {
+    console.log(quality)
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
@@ -27,6 +28,7 @@ const BlogDetail = (props: Blog) => {
               alt={''}
               width={300}
               height={250}
+              quality={75}
               loader={imgLoader}
             />
             <p className={styled.title}>{title}</p>
