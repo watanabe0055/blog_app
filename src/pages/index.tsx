@@ -2,6 +2,7 @@ import React from 'react'
 import client from '../../libs/client'
 import BlogDetail from '../template/index/blogDetail'
 import type { Blog, Category, Eyecatch } from '../type/blog'
+import Header from '@/atom/header/header'
 import HundleSetTitle from '@/atom/title/index'
 import styled from '@/pages/index.module.scss'
 
@@ -21,6 +22,7 @@ export const getStaticProps = async () => {
 export default function Home({ blog }: any) {
   return (
     <>
+      <Header />
       <div className={styled.appConteiner}>
         <HundleSetTitle
           title={'一覧画面 | BLOG'}
