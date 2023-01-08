@@ -13,7 +13,7 @@ const CustomErrorPage = () => {
           className={styled.error_contents_image}
           layout='intrinsic'
           src={Error_500}
-          alt='404_error'
+          alt='500_error'
         />
         <p className={styled.error_contents_text}>このページは現在存在しません</p>
         <Link href='/'>
