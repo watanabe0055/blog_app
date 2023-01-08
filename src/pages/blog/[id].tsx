@@ -1,4 +1,5 @@
 import client from '../../../libs/client'
+import styled from './index.module.scss'
 import BlogShow from '@/template/id/index'
 import type { Blog, Category } from '@/type/blog'
 
@@ -16,6 +17,7 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
   const data = await client.get({
     endpoint: 'blogs',
     contentId: id,
+    //TODO:object形式にする
     //queries: { richEditorFormat: 'object' },
   })
   console.log(data)
@@ -34,10 +36,16 @@ type Props = {
 }
 
 export default function BlogId({ blog }: any) {
-  console.log(blog)
   return (
     <>
-      <BlogShow title={blog.title} content={blog.content} updatedAt={blog.updatedAt} />
+      <div className={styled.appConteiner}>
+        <BlogShow
+          title={blog.title}
+          category={blog.category?.name || undefined}
+          content={blog.content}
+          updatedAt={blog.updatedAt}
+        />
+      </div>
     </>
   )
 }
