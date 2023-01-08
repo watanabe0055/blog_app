@@ -6,13 +6,10 @@ import Button from '@/atom/button/buttons'
 import Noimage from '@/atom/noimage/20200501_noimage-removebg-preview.png'
 import type { Blog, Category, Eyecatch } from '@/type/blog'
 
-const BlogDetail = (props: Blog) => {
+const BlogDetail = (props: any) => {
   const { id, title, updatedAt, category, eyecatch } = props
 
-  //nextのimageコンポーネントのオプション
-  //これがないとエラーになります！
-  const imgLoader: any = ({ src, width, quality }) => {
-    console.log(quality)
+  const imgLoader = ({ src, width, quality }: any) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
