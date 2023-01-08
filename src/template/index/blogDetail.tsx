@@ -11,7 +11,7 @@ const BlogDetail = (props: Blog) => {
 
   //nextのimageコンポーネントのオプション
   //これがないとエラーになります！
-  const imgLoader = ({ src, width, quality }) => {
+  const imgLoader: any = ({ src, width, quality }) => {
     console.log(quality)
     return `${src}?w=${width}&q=${quality || 75}`
   }
