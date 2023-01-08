@@ -6,13 +6,10 @@ import Button from '@/atom/button/buttons'
 import Noimage from '@/atom/noimage/20200501_noimage-removebg-preview.png'
 import type { Blog, Category, Eyecatch } from '@/type/blog'
 
-const BlogDetail = (props: Blog) => {
-  const { id, title, content, updatedAt, category, eyecatch, createdAt, publishedAt, revisedAt } =
-    props
+const BlogDetail = (props: any) => {
+  const { id, title, updatedAt, category, eyecatch } = props
 
-  //nextのimageコンポーネントのオプション
-  //これがないとエラーになります！
-  const imgLoader = ({ src, width, quality }) => {
+  const imgLoader = ({ src, width, quality }: any) => {
     return `${src}?w=${width}&q=${quality || 75}`
   }
 
@@ -24,11 +21,12 @@ const BlogDetail = (props: Blog) => {
             <span className={`${styled.fa} ${styled.fa_code}`}></span>
             <Image
               className={styled.eyecatch_image}
-              loader={imgLoader}
               src={eyecatch?.url || Noimage}
               alt={''}
               width={300}
               height={250}
+              quality={75}
+              loader={imgLoader}
             />
             <p className={styled.title}>{title}</p>
             <p className={styled.category_text}>{category?.name}</p>
