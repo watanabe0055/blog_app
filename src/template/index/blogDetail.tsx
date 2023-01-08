@@ -7,13 +7,12 @@ import Noimage from '@/atom/noimage/20200501_noimage-removebg-preview.png'
 import type { Blog, Category, Eyecatch } from '@/type/blog'
 
 const BlogDetail = (props: Blog) => {
-  const { id, title, content, updatedAt, category, eyecatch, createdAt, publishedAt, revisedAt } =
-    props
+  const { id, title, updatedAt, category, eyecatch } = props
 
   //nextのimageコンポーネントのオプション
   //これがないとエラーになります！
-  const imgLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`
+  const imgLoader = ({ src = Noimage, width = 300 }) => {
+    return `${src}?w=${width}`
   }
 
   return (
