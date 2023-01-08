@@ -11,8 +11,8 @@ const BlogDetail = (props: Blog) => {
 
   //nextのimageコンポーネントのオプション
   //これがないとエラーになります！
-  const imgLoader = ({ src = Noimage, width = 300 }) => {
-    return `${src}?w=${width}`
+  const imgLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`
   }
 
   return (
@@ -23,11 +23,11 @@ const BlogDetail = (props: Blog) => {
             <span className={`${styled.fa} ${styled.fa_code}`}></span>
             <Image
               className={styled.eyecatch_image}
-              loader={imgLoader}
               src={eyecatch?.url || Noimage}
               alt={''}
               width={300}
               height={250}
+              loader={imgLoader}
             />
             <p className={styled.title}>{title}</p>
             <p className={styled.category_text}>{category?.name}</p>
