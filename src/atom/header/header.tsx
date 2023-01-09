@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled from './header.module.scss'
-import Logo from './logo_transparent.png'
+import Logo from './logo-removebg-preview.png'
 
 const Header = () => {
   const iamgePx: number = 100
