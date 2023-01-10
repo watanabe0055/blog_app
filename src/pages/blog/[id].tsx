@@ -1,5 +1,7 @@
 import client from '../../../libs/client'
 import styled from './index.module.scss'
+import Footer from '@/atom/footer/footer'
+import Header from '@/atom/header/header'
 import BlogShow from '@/template/id/index'
 import type { Blog, Category } from '@/type/blog'
 
@@ -38,6 +40,7 @@ type Props = {
 export default function BlogId({ blog }: any) {
   return (
     <>
+      <Header />
       <div className={styled.appConteiner}>
         <BlogShow
           title={blog.title}
@@ -46,6 +49,7 @@ export default function BlogId({ blog }: any) {
           updatedAt={blog.updatedAt}
         />
       </div>
+      <Footer />
     </>
   )
 }

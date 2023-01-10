@@ -2,6 +2,8 @@ import React from 'react'
 import client from '../../libs/client'
 import BlogDetail from '../template/index/blogDetail'
 import type { Blog, Category, Eyecatch } from '../type/blog'
+import Footer from '@/atom/footer/footer'
+import Header from '@/atom/header/header'
 import HundleSetTitle from '@/atom/title/index'
 import styled from '@/pages/index.module.scss'
 
@@ -26,6 +28,7 @@ export default function Home({ blog }: any) {
           title={'一覧画面 | BLOG'}
           content={'ポートフォリオ用に作成したブログサイトです。CMSはmicroCMSを使用しています。'}
         />
+        <Header />
         {blog.map((blog: Blog, index: number) => (
           <div key={index}>
             <BlogDetail
@@ -41,6 +44,7 @@ export default function Home({ blog }: any) {
             />
           </div>
         ))}
+        <Footer />
       </div>
     </>
   )
